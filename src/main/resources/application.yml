@@ -1,0 +1,32 @@
+# API Gateway
+info:
+  component: Edge Server
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+zuul:
+  prefix: /api
+  routes:
+    refdata:
+      path: /refdata/**
+      url: http://localhost:8080/metallica/refdata
+    trades:
+      path: /trades/**
+      url: http://localhost:8080/metallica/trade
+ribbon:
+  eureka:
+    enabled: false
+
+server: 
+  port: 8081
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG	
