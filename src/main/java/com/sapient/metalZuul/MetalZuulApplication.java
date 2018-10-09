@@ -2,9 +2,8 @@ package com.sapient.metalZuul;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
-
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import com.sapient.metalZuul.filters.ErrorFilter;
 import com.sapient.metalZuul.filters.PostFilter;
 import com.sapient.metalZuul.filters.PreFilter;

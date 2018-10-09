@@ -19,6 +19,9 @@ zuul:
     trades:
       path: /trades/**
       url: http://localhost:8080/metallica/trade
+    marketdata:
+      path: /marketdata/**
+      url: http://localhost:8080/metallica/marketdata
 ribbon:
   eureka:
     enabled: false
